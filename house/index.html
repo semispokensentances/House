@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>house</title>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script> 
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="wall" src="assets/Blue_bumpy_stone_texture_(02).jpg">
+            <img id="roof" src="assets/4718344.jpg">
+            <img id="grass" src="assets/short-grass.jpg">
+        </a-assets>
+         <a-plane src="#grass"
+                rotation="-90 0 0"
+                scale="10 10 10"></a-plane>
+        <a-box src="#wall"
+                position="0 1.99 0"
+                scale="4 4 4"
+                side="double">
+            <a-box position=".4 .6 0"
+                    scale=".11 1.25 1.1"
+                    src="#roof"
+                    rotation="0 0 45"></a-box>
+            <a-box position="-.4 .6 0"
+                    scale=".11 1.25 1.1"
+                    src="#roof"
+                    rotation="0 0 -45"></a-box>
+            <a-triangle src="#wall"
+                        position="0 .7 .5"
+                        scale="1.0 .5"></a-triangle>
+                        <a-triangle src="#wall"
+                        position="0 .7 -.5"
+                        scale="1.0 .5" 
+                        side="double"></a-triangle>
+
+        </a-box>
+        <a-sky color="blue"></a-sky>
+    </a-scene>
+</body>
+</html>
